@@ -3,14 +3,11 @@ package com.nexr.spark.action.app;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class JavaSparkPi {
-    private static final Logger logger = LoggerFactory.getLogger(JavaSparkPi.class);
 
     public static void main(String[] args) throws Exception {
         SparkSession spark = SparkSession
@@ -37,9 +34,7 @@ public class JavaSparkPi {
 
         double pi = 4.0 * count / n;
 
-        logger.info("spark-app-result= Pi is roughly " + pi);
-        System.out.println("Stdout > spark-app-result= Pi is roughly " + pi);
-        logger.info("Pi is roughly {} ", pi);
+        System.out.println("spark-app-result= Pi is roughly " + pi);
 
         spark.stop();
     }
