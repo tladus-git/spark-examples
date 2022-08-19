@@ -9,7 +9,7 @@ import scala.Tuple2;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
-import com.nexr.spark.action.app.util.*;
+import com.nexr.spark.action.app.conf.*;
 
 
 public class JavaWordCount {
